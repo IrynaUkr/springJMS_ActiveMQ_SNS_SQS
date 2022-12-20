@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class Order {
     private final String user;
-    private final String typeOfOrder;
+    private final TypeOfGoods typeOfGoods;
     private final double amount;
     private final double total;
 
