@@ -15,9 +15,14 @@ public class OrderHandlerService {
     @Autowired
     JmsTemplate jmsTemplate;
 
-    @JmsListener(destination = "ordersQueue")
-    public void receiveMessageFromQueue(Order order) {
-        log.info("Received from queue {}", order);
+    @JmsListener(destination = "ordersTopic", containerFactory = "jmsContainerFactory")
+    public void receiveMessageFromTopic(Order order) {
+        log.info("Received from topic without selector messages <<<< {} >>>>", order);
+    }
+
+    @JmsListener(destination = "ordersTopic", containerFactory = "jmsContainerFactory", selector = "typeOfGoods='LIQUID'")
+    public void receiveMessageFromTopicLiquid(Order order) {
+        log.info("Received from topic with selector typeOfGoods = 'LIQUID <<<< {} >>>>", order);
         if (order.getTotal() > 100) {
             log.info("order rejected");
             jmsTemplate.convertAndSend("rejected-queue", order);
@@ -28,19 +33,17 @@ public class OrderHandlerService {
         }
     }
 
-    @JmsListener(destination = "ordersTopic", containerFactory = "empJmsContFactory")
-    public void receiveMessageFromTopic(Order order) {
-        log.info("Received from topic All messages <<<< {} >>>>", order);
-    }
-
-    @JmsListener(destination = "ordersTopic", containerFactory = "jmsContainerFactory", selector = "typeOfGoods = 'LIQUID'")
-    public void receiveMessageFromTopicLiquid(Order order) {
-        log.info("Received from topic with selector typeOfGoods = 'LIQUID <<<< {} >>>>", order);
-    }
-
-    @JmsListener(destination = "ordersTopic", containerFactory = "jmsContainerFactory", selector = "typeOfGoods = 'SOLID'")
+    @JmsListener(destination = "ordersTopic", containerFactory = "jmsContainerFactory", selector = "typeOfGoods='SOLID'")
     public void receiveMessageFromTopicSolid(Order order) {
         log.info("Received from topic with selector typeOfGoods =SOLID <<<< {} >>>>", order);
+        if (order.getTotal() > 100) {
+            log.info("order rejected");
+            jmsTemplate.convertAndSend("rejected", order);
+
+        } else {
+            log.info("order confirmed");
+            jmsTemplate.convertAndSend("confirmed", order);
+        }
     }
 
 }
