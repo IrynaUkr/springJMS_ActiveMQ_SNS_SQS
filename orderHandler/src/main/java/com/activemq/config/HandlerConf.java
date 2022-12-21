@@ -27,14 +27,12 @@ public class HandlerConf {
 
     @Value("${spring.activemq.password}")
     private String brokerPassword;
-
     @Bean
-    public DefaultJmsListenerContainerFactory empJmsContFactory() {
+    public DefaultJmsListenerContainerFactory jmsContainerFactory() {
         DefaultJmsListenerContainerFactory containerFactory = new DefaultJmsListenerContainerFactory();
         containerFactory.setPubSubDomain(true);
         containerFactory.setConnectionFactory(connectionFactory());
         containerFactory.setMessageConverter(jacksonJmsMessageConverter());
-        containerFactory.setSubscriptionDurable(true);
         return containerFactory;
     }
 
@@ -46,7 +44,6 @@ public class HandlerConf {
         activeMQConnFactory.setPassword(brokerUsername);
         activeMQConnFactory.setUserName(brokerPassword);
         factory.setTargetConnectionFactory(activeMQConnFactory);
-        factory.setClientId("client123");
         return factory;
     }
 

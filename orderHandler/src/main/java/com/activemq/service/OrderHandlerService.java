@@ -27,18 +27,20 @@ public class OrderHandlerService {
             jmsTemplate.convertAndSend("confirmed-queue", order);
         }
     }
-//    @JmsListener(destination = "ordersTopic", containerFactory = "empJmsContFactory")
-//    public void receiveMessageFromTopicLiquid(Order order) {
-//        log.info("Received from topic <<<< {} >>>>", order);
-//    }
 
-//    @JmsListener(destination = "ordersTopic", containerFactory = "empJmsContFactory", selector = "typeOfGoods = 'LIQUID'")
-//    public void receiveMessageFromTopicLiquid(Order order) {
-//        log.info("Received from topic <<<< {} >>>>", order);
-//    }
-    @JmsListener(destination = "ordersTopic", containerFactory = "empJmsContFactory", selector = "typeOfGoods = 'SOLID'")
+    @JmsListener(destination = "ordersTopic", containerFactory = "empJmsContFactory")
+    public void receiveMessageFromTopic(Order order) {
+        log.info("Received from topic All messages <<<< {} >>>>", order);
+    }
+
+    @JmsListener(destination = "ordersTopic", containerFactory = "jmsContainerFactory", selector = "typeOfGoods = 'LIQUID'")
+    public void receiveMessageFromTopicLiquid(Order order) {
+        log.info("Received from topic with selector typeOfGoods = 'LIQUID <<<< {} >>>>", order);
+    }
+
+    @JmsListener(destination = "ordersTopic", containerFactory = "jmsContainerFactory", selector = "typeOfGoods = 'SOLID'")
     public void receiveMessageFromTopicSolid(Order order) {
-        log.info("Received from topic <<<< {} >>>>", order);
+        log.info("Received from topic with selector typeOfGoods =SOLID <<<< {} >>>>", order);
     }
 
 }

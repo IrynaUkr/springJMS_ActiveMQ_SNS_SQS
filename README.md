@@ -24,5 +24,6 @@ Use topics to implement message exchange – 1 point.
 Add trigger to S3 bucket that will send message to SQS that file was changed. - 1 point.
 
 https://medium.com/geekculture/queues-vs-topics-and-examples-with-java-spring-boot-and-apache-activemq-d945c474bc3e
+https://memorynotfound.com/spring-boot-activemq-publish-subscribe-topic-configuration-example/
 message selectors
 https://codenotfound.com/spring-jms-message-selector-example.html
