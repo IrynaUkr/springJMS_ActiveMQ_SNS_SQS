@@ -12,6 +12,7 @@
         <module>orderSender</module>
         <module>orderHandler</module>
         <module>orderLogger</module>
+        <module>model</module>
     </modules>
 
     <properties>

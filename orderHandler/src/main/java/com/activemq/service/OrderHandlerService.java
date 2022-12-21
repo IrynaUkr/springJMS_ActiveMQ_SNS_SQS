@@ -38,11 +38,11 @@ public class OrderHandlerService {
         log.info("Received from topic with selector typeOfGoods =SOLID <<<< {} >>>>", order);
         if (order.getTotal() > 100) {
             log.info("order rejected");
-            jmsTemplate.convertAndSend("rejected", order);
+            jmsTemplate.convertAndSend("rejectedTopic", order);
 
         } else {
             log.info("order confirmed");
-            jmsTemplate.convertAndSend("confirmed", order);
+            jmsTemplate.convertAndSend("confirmedTopic", order);
         }
     }
 

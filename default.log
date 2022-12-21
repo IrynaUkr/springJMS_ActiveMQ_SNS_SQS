@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-21T23:01:43.103266Z</date>
+  <millis>1671663703103</millis>
+  <nanos>266000</nanos>
+  <sequence>3</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicLiquid</method>
+  <thread>47</thread>
+  <message>order confirmed {}Order(user=ty, typeOfGoods=SOLID, amount=23.0, total=21.0)</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-21T23:05:44.343205Z</date>
+  <millis>1671663944343</millis>
+  <nanos>205000</nanos>
+  <sequence>3</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicSolid</method>
+  <thread>45</thread>
+  <message>order rejected  Order(user=example, typeOfGoods=SOLID, amount=2.92929292E8, total=9.29292929E8)</message>
+</record>
+</log>
