@@ -1,14 +1,16 @@
 package com.activemq.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Data
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Order {
-    private final String user;
-    private final TypeOfGoods typeOfGoods;
-    private final double amount;
-    private final double total;
+    private  String user;
+    private  String typeOfGoods;
+    private  double amount;
+    private  double total;
 
 }

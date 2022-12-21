@@ -2,7 +2,6 @@ package com.activemq;
 
 
 import com.activemq.model.Order;
-import com.activemq.model.TypeOfGoods;
 import com.activemq.service.SenderService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,7 +23,7 @@ public class OrderApplication {
             System.out.println("enter user name");
             String userName = in.nextLine();
             System.out.println("enter typeOfGoods, LIQUID or SOLID");
-            TypeOfGoods typeOfGoods = TypeOfGoods.valueOf(in.nextLine());
+            String typeOfGoods = in.nextLine();
             System.out.println("enter amount");
             double amount = Double.parseDouble(in.nextLine());
             System.out.println("enter total");
