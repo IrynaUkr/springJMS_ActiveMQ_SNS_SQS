@@ -46,12 +46,6 @@ public class SenderService {
                                 "LIQUID");
                         return messagePostProcessor;
                     });
-        } else {
-            try {
-                jmsTemplate.convertAndSend(topic, order);
-            } catch (Exception ex) {
-                log.error("ERROR in sending message to topic", ex);
-            }
         }
     }
 

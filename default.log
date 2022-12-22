@@ -30,3 +30,19 @@
   <message>order rejected  Order(user=example, typeOfGoods=SOLID, amount=2.92929292E8, total=9.29292929E8)</message>
 </record>
 </log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-22T19:26:09.005361Z</date>
+  <millis>1671737169005</millis>
+  <nanos>361000</nanos>
+  <sequence>3</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicLiquid</method>
+  <thread>50</thread>
+  <message>order confirmed Order(user=second, typeOfGoods=SOLID, amount=20.0, total=30.0)</message>
+</record>
+</log>

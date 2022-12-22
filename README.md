@@ -27,3 +27,4 @@ https://medium.com/geekculture/queues-vs-topics-and-examples-with-java-spring-bo
 https://memorynotfound.com/spring-boot-activemq-publish-subscribe-topic-configuration-example/
 message selectors
 https://codenotfound.com/spring-jms-message-selector-example.html
+https://medium.com/oril/uploading-files-to-aws-s3-bucket-using-spring-boot-483fcb6f8646

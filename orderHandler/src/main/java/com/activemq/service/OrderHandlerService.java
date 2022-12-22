@@ -15,11 +15,6 @@ public class OrderHandlerService {
     @Autowired
     JmsTemplate jmsTemplate;
 
-    @JmsListener(destination = "ordersTopic", containerFactory = "jmsContainerFactory")
-    public void receiveMessageFromTopic(Order order) {
-        log.info("Received from topic without selector messages <<<< {} >>>>", order);
-    }
-
     @JmsListener(destination = "ordersTopic", containerFactory = "jmsContainerFactory", selector = "typeOfGoods='LIQUID'")
     public void receiveMessageFromTopicLiquid(Order order) {
         log.info("Received from topic with selector typeOfGoods = 'LIQUID <<<< {} >>>>", order);
