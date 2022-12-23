@@ -31,7 +31,7 @@ public class SenderService {
     }
 
     public void sendMessageToTopic(Order order) throws JsonProcessingException {
-        if (order.getTypeOfGoods().toString().equals("SOLID")) {
+        if (order.getTypeOfGoods().equals("SOLID")) {
             log.info("type");
             jmsTemplate.convertAndSend(topic, order,
                     messagePostProcessor -> {
@@ -39,7 +39,7 @@ public class SenderService {
                                 "SOLID");
                         return messagePostProcessor;
                     });
-        } else if (order.getTypeOfGoods().toString().equals("LIQUID")) {
+        } else if (order.getTypeOfGoods().equals("LIQUID")) {
             jmsTemplate.convertAndSend(topic, order,
                     messagePostProcessor -> {
                         messagePostProcessor.setStringProperty("typeOfGoods",

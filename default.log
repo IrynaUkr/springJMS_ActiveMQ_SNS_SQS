@@ -46,3 +46,155 @@
   <message>order confirmed Order(user=second, typeOfGoods=SOLID, amount=20.0, total=30.0)</message>
 </record>
 </log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-22T20:35:09.567970Z</date>
+  <millis>1671741309567</millis>
+  <nanos>970000</nanos>
+  <sequence>3</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicSolid</method>
+  <thread>51</thread>
+  <message>order rejected  Order(user=req, typeOfGoods=SOLID, amount=34567.0, total=112121.0)</message>
+</record>
+<record>
+  <date>2022-12-22T20:36:14.196423Z</date>
+  <millis>1671741374196</millis>
+  <nanos>423000</nanos>
+  <sequence>4</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicLiquid</method>
+  <thread>53</thread>
+  <message>order confirmed Order(user=poiy, typeOfGoods=SOLID, amount=22.0, total=33.0)</message>
+</record>
+<record>
+  <date>2022-12-22T20:36:14.196423Z</date>
+  <millis>1671741374196</millis>
+  <nanos>423000</nanos>
+  <sequence>4</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicLiquid</method>
+  <thread>53</thread>
+  <message>order confirmed Order(user=poiy, typeOfGoods=SOLID, amount=22.0, total=33.0)</message>
+</record>
+<record>
+  <date>2022-12-22T21:02:33.458527Z</date>
+  <millis>1671742953458</millis>
+  <nanos>527000</nanos>
+  <sequence>5</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicSolid</method>
+  <thread>51</thread>
+  <message>order rejected  Order(user=ert, typeOfGoods=SOLID, amount=3457.0, total=123445.0)</message>
+</record>
+<record>
+  <date>2022-12-22T21:02:33.458527Z</date>
+  <millis>1671742953458</millis>
+  <nanos>527000</nanos>
+  <sequence>5</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicSolid</method>
+  <thread>51</thread>
+  <message>order rejected  Order(user=ert, typeOfGoods=SOLID, amount=3457.0, total=123445.0)</message>
+</record>
+<record>
+  <date>2022-12-22T21:02:33.458527Z</date>
+  <millis>1671742953458</millis>
+  <nanos>527000</nanos>
+  <sequence>5</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicSolid</method>
+  <thread>51</thread>
+  <message>order rejected  Order(user=ert, typeOfGoods=SOLID, amount=3457.0, total=123445.0)</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-23T09:41:10.979273Z</date>
+  <millis>1671788470979</millis>
+  <nanos>273000</nanos>
+  <sequence>3</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicLiquid</method>
+  <thread>50</thread>
+  <message>order confirmed Order(user=user, typeOfGoods=SOLID, amount=23.0, total=32.0)</message>
+</record>
+<record>
+  <date>2022-12-23T09:43:05.356081Z</date>
+  <millis>1671788585356</millis>
+  <nanos>81000</nanos>
+  <sequence>4</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicLiquid</method>
+  <thread>50</thread>
+  <message>order confirmed Order(user=first, typeOfGoods=SOLID, amount=23.0, total=23.0)</message>
+</record>
+<record>
+  <date>2022-12-23T09:43:05.356081Z</date>
+  <millis>1671788585356</millis>
+  <nanos>81000</nanos>
+  <sequence>4</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicLiquid</method>
+  <thread>50</thread>
+  <message>order confirmed Order(user=first, typeOfGoods=SOLID, amount=23.0, total=23.0)</message>
+</record>
+<record>
+  <date>2022-12-23T14:12:42.126233Z</date>
+  <millis>1671804762126</millis>
+  <nanos>233000</nanos>
+  <sequence>5</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicLiquid</method>
+  <thread>50</thread>
+  <message>order confirmed Order(user=erererer, typeOfGoods=SOLID, amount=23.0, total=32.0)</message>
+</record>
+<record>
+  <date>2022-12-23T14:12:42.126233Z</date>
+  <millis>1671804762126</millis>
+  <nanos>233000</nanos>
+  <sequence>5</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicLiquid</method>
+  <thread>50</thread>
+  <message>order confirmed Order(user=erererer, typeOfGoods=SOLID, amount=23.0, total=32.0)</message>
+</record>
+<record>
+  <date>2022-12-23T14:12:42.126233Z</date>
+  <millis>1671804762126</millis>
+  <nanos>233000</nanos>
+  <sequence>5</sequence>
+  <logger>com.activemq</logger>
+  <level>INFO</level>
+  <class>com.activemq.service.LoggerService</class>
+  <method>receiveMessageFromTopicLiquid</method>
+  <thread>50</thread>
+  <message>order confirmed Order(user=erererer, typeOfGoods=SOLID, amount=23.0, total=32.0)</message>
+</record>
+</log>
